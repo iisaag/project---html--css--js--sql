@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>๋࣭ ⭑🦋๋࣭ ⭑</title>
+    <link rel="stylesheet" href="./style/style-register.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<style> 
+    
+    h1 {
+        font-family: "DM Serif Display", serif;
+    }
+    p, a , button, label {
+        font-family: "Merriweather", serif;
+    }  
+    
+</style>
+
+<body>
+    <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.2/firebase-auth.js"></script>
+
+    <script >
+
+        
+    
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDq_2D0UjW9mxQLA8QSTop1BCR9J3pU1DE",
+          authDomain: "meuprimeirosite-9693a.firebaseapp.com",
+          projectId: "meuprimeirosite-9693a",
+          storageBucket: "meuprimeirosite-9693a.appspot.com",
+          messagingSenderId: "591604959174",
+          appId: "1:591604959174:web:0b84030f92ebf2c18214c7"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+        function cadastrar(){
+
+            auth=null;
+
+            var mEmail = document.getElementById("txtEmail").value;
+            var mSenha = document.getElementById("txtSenha").value;
+            var mNome = document.getElementById("txtNome").value;
+            var mTelefone = document.getElementById("txtTel").value;
+
+            console.log(mEmail,mNome,mTelefone,mSenha);
+
+            firebase.auth().createUserWithEmailAndPassword(mEmail,mSenha,).then(function(user){
+                auth = user;
+                }).catch(function(error){    
+            });
+        }
+
+    </script>
+
+    <header>
+        <h2 class="Logo">logo </h2> 
+        <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Services</a>
+        <button class="btnLogin-popup" onclick="window.location.href='login.html'">Login</button>
+        </nav>
+    </header>
+
+    <div class="wrapper" >
+        
+            <form action="">
+                <h1>Register</h1>
+            <div class="input-box">
+                <input type="text" 
+                placeholder="Name" id="txtNome" required> 
+                <i class='bx bx-user' ></i>
+                
+            </div>
+
+            <div class="input-box">
+                <input type="text" 
+                placeholder="Email" id="txtEmail" required> 
+                <i class='bx bx-envelope' ></i>
+            </div>
+            
+            <div class="input-box">
+                <input type="password" 
+                placeholder="Password" id="txtSenha" required>
+                <i class='bx bx-lock-alt' ></i>
+            </div>
+
+            <div class="input-box">
+                <input type="tel" 
+                placeholder="Telephone" id="txtTel"> 
+                <i class='bx bx-phone'></i>
+                <h2>(Optional)</h2>
+            </div>
+           <!-- <button type="submit" class="btn" id="btnLogin"> Login </button> -->
+            <br>
+            <!--<button type="submit" class="btn" id="btnCadastrar" onclick="cadastrar()"> Cadastro </button>-->
+            </form>
+    </div>
+
+    <button class="btn" class="wrapper" onclick="cadastrar()"> Register </button>
+
+</body>
+</html>

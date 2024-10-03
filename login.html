@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>๋࣭ ⭑🦋๋࣭ ⭑</title>
+    <link rel="stylesheet" href="./style/style-index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<style> 
+   
+
+    h1{
+        font-family: "DM Serif Display", serif;
+    }
+    p, a , button, label {
+        font-family: "Merriweather", serif;
+    }
+
+    
+</style>
+
+<body>
+
+    <header>
+        <h2 class="Logo">logo </h2> 
+        <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Services</a>
+        <button class="btnLogin-popup" onclick="window.location.href='login.html'">Login</button>
+        </nav>
+    </header>
+
+    <div class="wrapper" >
+        
+            <form action="">
+                <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" 
+                placeholder="Email" id="txtEmail" required> 
+                <i class='bx bx-envelope' ></i>
+            </div>
+            
+            <div class="input-box">
+                <input type="password" 
+                placeholder="Password" id="txtSenha" required>
+                <i class='bx bx-lock-alt' ></i>
+            </div>
+            
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me </label>
+                <a href="password.html"> Forgot password?</a>
+            </div> 
+            <button type="submit" class="btn"> Register </button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="register.html"> Register</a></p>
+            </div>   
+           <!-- <button type="submit" class="btn" id="btnLogin"> Login </button> -->
+            <br>
+            <!--<button type="submit" class="btn" id="btnCadastrar" onclick="cadastrar()"> Cadastro </button>-->
+            </form>
+            
+    </div>
+
+    
+
+</body>
+</html>
