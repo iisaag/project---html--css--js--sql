@@ -118,15 +118,22 @@ header {
 
 .menu-items {
     list-style: none;
-    padding: 0; /* Remover o padding para controle total do espaço */
+    padding: 30px; /* Remover o padding para controle total do espaço */
 }
 
 .menu-items li {
     display: flex;
     align-items: center;
-    margin: 5px 0; /* Reduzido para diminuir espaço entre os itens */
+    margin:20px 0; /* Reduzido para diminuir espaço entre os itens */
     font-size: 1.1em;
+    box-shadow: 0px 7px 49px -8px rgba(223,203,255,0.79);
+    -webkit-box-shadow: 0px 7px 49px -8px rgba(169, 133, 226, 0.79);
+    -moz-box-shadow: 0px 7px 49px -8px rgba(223,203,255,0.79);
     color: #6E5AA3;
+    background-color: white;
+    height: 50px;
+    border-radius: 10px;
+
 }
 
 .menu-items li i {
