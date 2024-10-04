@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,745;1,745&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #F4F4F9;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 23px 50px;
+    background: #8E7DBE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    transition: 0.5s;
+    box-shadow: 0px 7px 49px -8px rgba(223, 203, 255, 0.79);
+}
+
+.Logo {
+    font-size: 2em;
+    color: #ffffff;
+    font-family: 'Dancing Script', serif;
+    transition: 0.5s;
+}
+
+.Logo:hover {
+    transform: scale(1.1);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation a {
+    font-size: 1.1em;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 20px;
+    position: relative;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 50px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Menu Lateral Estilo */
+.menu-vertical {
+    width: 230px;
+    height: 100vh;
+    background: #fff;
+    padding: 15px;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0px 7px 49px -8px rgba(223, 203, 255, 0.79);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 98;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ajustado para alinhar o conteúdo ao topo */
+    margin-top: 100px; /* Espaço para não sobrepor o header */
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px; /* Ajuste conforme necessário */
+}
+
+.profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px; /* Ajustado para diminuir espaço abaixo da imagem */
+}
+
+.upload-btn {
+    font-size: 0.9em;
+    color: #6E5AA3;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.profile p {
+    font-size: 1em;
+    color: #333;
+    margin: 0; /* Removido espaço acima e abaixo do nome */
+}
+
+.menu-items {
+    list-style: none;
+    padding: 0; /* Remover o padding para controle total do espaço */
+}
+
+.menu-items li {
+    display: flex;
+    align-items: center;
+    margin: 5px 0; /* Reduzido para diminuir espaço entre os itens */
+    font-size: 1.1em;
+    color: #6E5AA3;
+}
+
+.menu-items li i {
+    margin-right: 10px;
+    font-size: 1.3em;
+}
+
+.menu-items li a {
+    text-decoration: none;
+    color: #6E5AA3;
+    transition: color 0.3s;
+}
+
+.menu-items li a:hover {
+    color: #8E7DBE;
+}
+

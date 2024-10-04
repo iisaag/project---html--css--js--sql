@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" href="output-onlinepngtools.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style-planner.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Menu Vertical</title>
+</head>
+
+<body>
+    <header>
+        <h2 class="Logo"> planner.life </h2> 
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="#">Finance</a>
+            <a href="planner.html">Planner</a>
+            <a href="#">Calendar</a>
+        </nav>
+    </header>
+
+    <!-- Menu lateral vertical -->
+    <div class="menu-vertical">
+        <div class="profile">
+            <img id="profile-pic" src="default-avatar.png" alt="Profile Picture">
+            <input type="file" id="upload" style="display:none;" accept="image/*">
+            <label for="upload" class="upload-btn">Trocar foto</label>
+            <p>Rhett Butler</p>
+        </div>
+        <ul class="menu-items">
+            <li><i class='bx bxs-user'></i><a href="#">Account</a></li>
+            <li><i class='bx bxs-bell'></i><a href="#">Notifications</a></li>
+            <li><i class='bx bxs-shopping-bag'></i><a href="#">My Orders</a></li>
+            <li><i class='bx bxs-star'></i><a href="#">Favorites</a></li>
+            <li><i class='bx bxs-cog'></i><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const uploadInput = document.getElementById("upload");
+        const profilePic = document.getElementById("profile-pic");
+
+        uploadInput.addEventListener("change", function(event) {
+            const reader = new FileReader();
+            reader.onload = function(){
+                profilePic.src = reader.result;
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        });
+    </script>
+</body>
+</html>
